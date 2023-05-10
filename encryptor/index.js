@@ -12,16 +12,17 @@ function encrypt(text) {
     
     if (letterIndex < 0) {
       result += letter;
-    }
+    }// if
     
     else {
       result += encrypt_key[letterIndex]; 
-    }
-  }
+    }// else
+    
+  }// for
   
   return result;
   
-}
+}// encrypt
 
 
 function decrypt(text) {
@@ -33,15 +34,14 @@ function decrypt(text) {
     
     if (letterIndex < 0) {
       result += letter;
-    }
+    }// if
     
     else {
       result += letters[letterIndex]; 
-    }
-  }
+    }// else
+    
+  }// for
   
   return result;
   
-}
-
-
+}// decrypt

@@ -45,3 +45,26 @@ function decrypt(text) {
   return result;
   
 }// decrypt
+
+// add event listener to the form
+const encryptForm = document.getElementById('encrypt-form');
+encryptForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  // get the value of the content
+  let messageElement = document.getElementById('encrypt');
+  let message = messageElement.value;
+  
+  // encrypt the content
+  let encrypted = encrypt(message);
+  
+  // display encrypted message in p element
+  let encodedMessageElement = document.getElementById('encoded-message');
+  encodedMessageElement.innerText = encrypted;
+});
+
+
+
+
+
+
